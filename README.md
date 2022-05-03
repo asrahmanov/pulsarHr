@@ -20,19 +20,19 @@ npm run watch
 <pre>
 sudo docker-compose up -d
 
-sudo docker exec nbs_biobank_sevice_fpm composer install
+sudo docker exec pulsar_hr_sevice_fpm composer install
 
 cp .env.prod .env
 
-sudo docker exec nbs_biobank_sevice_fpm php artisan swagger-lume:generate
+sudo docker exec pulsar_hr_sevice_fpm php artisan swagger-lume:generate
 
 Создание баз данных
 
 sudo cat docker/backup.sql | sudo docker exec -i nbs_biobank_sevice_mysql /usr/bin/mysql -u root --password=#tWM1dKA
 
-sudo docker exec nbs_biobank_sevice_fpm php artisan migrate
+sudo docker exec pulsar_hr_sevice_fpm php artisan migrate
 
-sudo docker exec nbs_biobank_sevice_fpm php artisan db:seed
+sudo docker exec pulsar_hr_sevice_fpm php artisan db:seed
 </pre> 
 
 
