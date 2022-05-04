@@ -49,7 +49,7 @@ class HrReportTypesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @OA\Post(
      *     path="/api/hr-report-types",
-     *     tags={"HR report types"},
+     *     tags={"HR Report types"},
      *     @OA\Parameter( name="api_token", in="header", required=false, description="API token", @OA\Schema( type="string" ) ),
      *     @OA\RequestBody(
      *    request="Create HR Report Types",
@@ -132,7 +132,7 @@ class HrReportTypesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @OA\Patch (
      *     path="/api/hr-report-types/{id}",
-     *     tags={"HR Report Types"},
+     *     tags={"HR Report types"},
      *     @OA\Parameter( name="api_token", in="header", required=false, description="API token", @OA\Schema( type="string" ) ),
      *     @OA\Parameter(
      *      name="id",
@@ -208,7 +208,7 @@ class HrReportTypesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @OA\Delete  (
      *     path="/api/hr-report-types/{id}",
-     *     tags={"HR Report Types"},
+     *     tags={"HR Report types"},
      *     @OA\Parameter( name="api_token", in="header", required=false, description="API token", @OA\Schema( type="string" ) ),
      *     @OA\Parameter(
      *      name="id",
