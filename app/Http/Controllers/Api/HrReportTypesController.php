@@ -23,9 +23,7 @@ class HrReportTypesController extends Controller
      *     type="array",
      *     @OA\Items(type="object",
      *              @OA\Property(property="id", type="number", example="443"),
-     *
-     *              @OA\Property(property="name_en",description="название на Английском", type="string", example="Cerebrospinal fluid (CSF)"),
-     *              @OA\Property(property="name_ru",description="название на Русском", type="string", example="Спинномозговая жидкость"),
+     *              @OA\Property(property="name",description="название на Английском", type="string", example="Cerebrospinal fluid (CSF)"),
      *     )
      * )
      *      ),
@@ -59,8 +57,7 @@ class HrReportTypesController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *
-     *          @OA\Property(property="name",description="название на Русском", type="string", example="Спинномозговая жидкость"),
+     *          @OA\Property(property="name",description="название на Русском", type="string", example="Тест"),
      *
      *    )
      * ),
@@ -71,7 +68,7 @@ class HrReportTypesController extends Controller
      *             type="object",
      *              @OA\Property(property="id", type="number", example="443"),
      *
-     *              @OA\Property(property="name",description="название на Русском", type="string", example="Спинномозговая жидкость"),
+     *              @OA\Property(property="name",description="название на Русском", type="string", example="Тест"),
      *         )
      *      ),
      *     @OA\Response(
@@ -150,9 +147,7 @@ class HrReportTypesController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *
-     *          @OA\Property(property="name_en",description="название на Английском", type="string", example="Cerebrospinal fluid (CSF)"),
-     *          @OA\Property(property="name_ru",description="название на Русском", type="string", example="Спинномозговая жидкость"),
+     *          @OA\Property(property="name",description="название на Русском", type="string", example="Тест"),
      *    )
      * ),
      *     @OA\Response(
@@ -162,8 +157,7 @@ class HrReportTypesController extends Controller
      *             type="object",
      *              @OA\Property(property="id", type="number", example="443"),
      *
-     *              @OA\Property(property="name_en",description="название на Английском", type="string", example="Cerebrospinal fluid (CSF)"),
-     *              @OA\Property(property="name_ru",description="название на Русском", type="string", example="Спинномозговая жидкость"),
+     *              @OA\Property(property="name",description="название на Русском", type="string", example="Тест"),
      *         )
      *      ),
      *     @OA\Response(
