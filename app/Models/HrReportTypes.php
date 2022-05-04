@@ -19,7 +19,7 @@ class HrReportTypes extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = 'pulsar_report_types';
+    protected $table = 'report_types';
 
     protected $primaryKey = 'id';
 

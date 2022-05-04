@@ -23,7 +23,7 @@ class HrReportTypesController extends Controller
      *     type="array",
      *     @OA\Items(type="object",
      *              @OA\Property(property="id", type="number", example="443"),
-     *              @OA\Property(property="name",description="название на Английском", type="string", example="Cerebrospinal fluid (CSF)"),
+     *              @OA\Property(property="name",description="название на Английском", type="string", example="Тест"),
      *     )
      * )
      *      ),
