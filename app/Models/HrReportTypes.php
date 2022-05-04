@@ -13,6 +13,19 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $name
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes newQuery()
+ * @method static \Illuminate\Database\Query\Builder|HrReportTypes onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes query()
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|HrReportTypes withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|HrReportTypes withoutTrashed()
+ * @mixin \Eloquent
  */
 class HrReportTypes extends Model
 {
