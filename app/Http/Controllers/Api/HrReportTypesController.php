@@ -49,7 +49,7 @@ class HrReportTypesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @OA\Post(
      *     path="/api/hr-report-types",
-     *     tags={"HR Report tTypes"},
+     *     tags={"HR report types"},
      *     @OA\Parameter( name="api_token", in="header", required=false, description="API token", @OA\Schema( type="string" ) ),
      *     @OA\RequestBody(
      *    request="Create HR Report Types",

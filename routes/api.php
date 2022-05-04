@@ -45,9 +45,15 @@ reg_routes(
 );
 
 
-
-
 reg_routes('hr-report-types', \App\Http\Controllers\Api\HrReportTypesController::class, $router);
+reg_routes('hr-report', \App\Http\Controllers\Api\HrReportController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-report-day', 'pathParams'=>['report_day']]
+    ]
+);
 
 
 /*
@@ -65,10 +71,10 @@ function reg_routes($name, $controllerName, $router, $only = [], $except = [], $
 
             $customMethod = $item['method'];
             $customUri = $item['uri'];
-            $patParamsUri ='';
-            if (isset($item['pathParams']) && is_array($item['pathParams'])){
-                foreach ($item['pathParams'] as $pathParamsItem){
-                    $patParamsUri .='/{'. $pathParamsItem .'}';
+            $patParamsUri = '';
+            if (isset($item['pathParams']) && is_array($item['pathParams'])) {
+                foreach ($item['pathParams'] as $pathParamsItem) {
+                    $patParamsUri .= '/{' . $pathParamsItem . '}';
                 }
             }
             $action = '';
