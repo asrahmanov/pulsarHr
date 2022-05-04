@@ -22,8 +22,8 @@ class HrReportTypesController extends Controller
      *      @OA\JsonContent(
      *     type="array",
      *     @OA\Items(type="object",
-     *              @OA\Property(property="id", type="number", example="1"),
-     *              @OA\Property(property="name",description="название отчета", type="string", example="Тест"),
+     *              @OA\Property(property="id", type="number", example="443"),
+     *              @OA\Property(property="name",description="название на Английском", type="string", example="Тест"),
      *     )
      * )
      *      ),
@@ -49,7 +49,7 @@ class HrReportTypesController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @OA\Post(
      *     path="/api/hr-report-types",
-     *     tags={"HR Report Types"},
+     *     tags={"HR Report tTypes"},
      *     @OA\Parameter( name="api_token", in="header", required=false, description="API token", @OA\Schema( type="string" ) ),
      *     @OA\RequestBody(
      *    request="Create HR Report Types",
@@ -57,7 +57,6 @@ class HrReportTypesController extends Controller
      *    @OA\JsonContent(
      *        type="object",
      *        required={""},
-     *
      *          @OA\Property(property="name",description="название на Русском", type="string", example="Тест"),
      *
      *    )
@@ -156,8 +155,9 @@ class HrReportTypesController extends Controller
      *          description="Success Create",
      *          @OA\JsonContent(
      *             type="object",
-     *              @OA\Property(property="id", type="number", example="1"),
-     *              @OA\Property(property="name",description="название", type="string", example="Тест"),
+     *              @OA\Property(property="id", type="number", example="443"),
+     *
+     *              @OA\Property(property="name",description="название на Русском", type="string", example="Тест"),
      *         )
      *      ),
      *     @OA\Response(
