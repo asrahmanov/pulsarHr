@@ -1,4 +1,4 @@
-<h1 style="text-align: center;color: red">BIOBANK</h1>
+<h1 style="text-align: center;color: red">PULSAR HR</h1>
 
 <h1 style="text-align: center;color: #6610f2">Локально</h1>  
 <pre>
@@ -28,7 +28,7 @@ sudo docker exec pulsar_hr_sevice_fpm php artisan swagger-lume:generate
 
 Создание баз данных
 
-sudo cat docker/backup.sql | sudo docker exec -i nbs_biobank_sevice_mysql /usr/bin/mysql -u root --password=#tWM1dKA
+sudo cat docker/backup.sql | sudo docker exec -i pulsar_hr_sevice_mysql /usr/bin/mysql -u root --password=#tWM1dKA
 
 sudo docker exec pulsar_hr_sevice_fpm php artisan migrate
 

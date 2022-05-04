@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  nbs-nginx:
+  pulsar-nginx:
     image: nginx:alpine
     container_name: pulsar_hr_service_nginx
     restart: unless-stopped
@@ -12,14 +12,14 @@ services:
     networks:
       - pulsar_bridge
 
-  nbs-fpm:
+  pulsar-fpm:
     build:
       args:
-        user: nbs_user
+        user: pulsar_user
         uid: 1000
       context: ./
       dockerfile: docker/Fpm.Dockerfile
-    image: pulsar_hr_service
+    image: pulsar_hr_sevice
     container_name: pulsar_hr_sevice_fpm
     restart: unless-stopped
     working_dir: /var/www/
