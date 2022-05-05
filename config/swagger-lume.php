@@ -7,7 +7,7 @@ return [
         | Edit to set the api's title
         |--------------------------------------------------------------------------
          */
-        'title' => 'BIOBANK API',
+        'title' => 'PULSAR HR SERVICE',
     ],
 
     'routes' => [

@@ -26,6 +26,28 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|HrReportTypes withTrashed()
  * @method static \Illuminate\Database\Query\Builder|HrReportTypes withoutTrashed()
  * @mixin \Eloquent
+ * @property int $report_type_id
+ * @property string|null $text_1
+ * @property string|null $text_2
+ * @property string|null $text_3
+ * @property string|null $text_4
+ * @property string|null $date_1
+ * @property string|null $date_2
+ * @property string|null $date_3
+ * @property string|null $date_4
+ * @property string|null $report_day
+ * @property int $company_id
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereCompanyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereDate1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereDate2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereDate3($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereDate4($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereReportDay($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereReportTypeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereText1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereText2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereText3($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReport whereText4($value)
  */
 class HrReport extends Model
 {
@@ -41,6 +63,7 @@ class HrReport extends Model
     protected $dates = ['deleted_at'];
 
     protected $fillable=[
+        "company_id",
         "report_type_id",
         "text_1",
         "text_2",
@@ -61,15 +84,6 @@ class HrReport extends Model
     public function validate($inputs,$create=true) {
 
         return \Validator::make($inputs, [
-            "text_1"=>'string',
-            "text_2"=>'string',
-            "text_3"=>'string',
-            "text_4"=>'string',
-            "date_1"=>'date',
-            "date_2"=>'date',
-            "date_3"=>'date',
-            "date_4"=>'date',
-            "report_day"=>'date',
             "report_type_id"=>'integer',
         ]);
     }

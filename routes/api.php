@@ -51,7 +51,7 @@ reg_routes('hr-report', \App\Http\Controllers\Api\HrReportController::class,
     [],
     [],
     [
-        ['method' => 'get', 'uri' => 'get-by-report-day', 'pathParams'=>['report_day']]
+        ['method' => 'get', 'uri' => 'get-by-report-day', 'pathParams'=>['report_day', 'company_id']]
     ]
 );
 

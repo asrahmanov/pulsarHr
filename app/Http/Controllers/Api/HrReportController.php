@@ -30,8 +30,9 @@ class HrReportController extends Controller
      * @return \Illuminate\Http\JsonResponse
      * @OA\Get (
      *     tags={"HR Report"},
-     *     path="/api/hr-report/get-by-report-day/{report_day}",
+     *     path="/api/hr-report/get-by-report-day/{report_day}/{company_id}",
      *     @OA\Parameter( name="report_day", in="path", required=false, description="Получить все отчеты по дате", @OA\Schema( type="date" ) ),
+     *     @OA\Parameter( name="company_id", in="path", required=false, description="", @OA\Schema( type="integer" ) ),
      *
      *     @OA\Response(
      *          response=200,
@@ -42,11 +43,19 @@ class HrReportController extends Controller
      *      ),
      * )
      */
-    public function getByReportDay($report_day)
+    public function getByReportDay($report_day, $company_id)
     {
-        return  HrReport::select()
-            ->where('report_day', '=', $report_day)
+//        return  HrReport::select()
+//            ->where('report_day', '=', $report_day)
+//            ->where('company_id', '=', $company_id)
+//            ->get();
+
+        return HrReport::
+              whereCompanyId($report_day)
+            ->whereCompanyId($company_id)
             ->get();
+
+
     }
 
     /**
@@ -187,6 +196,7 @@ class HrReportController extends Controller
      *          @OA\Property(property="date_4",description="2022-04-01", type="date", example="2022-04-01"),
      *          @OA\Property(property="report_day",description="2022-04-01", type="date", example="2022-04-01"),
      *          @OA\Property(property="report_type_id",description="1", type="integer", example="1"),
+     *          @OA\Property(property="company_id",description="1", type="integer", example="1"),
      *    )
      * ),
      *     @OA\Response(
@@ -205,6 +215,7 @@ class HrReportController extends Controller
      *          @OA\Property(property="date_4",description="2022-04-01", type="date", example="2022-04-01"),
      *          @OA\Property(property="report_day",description="2022-04-01", type="date", example="2022-04-01"),
      *          @OA\Property(property="report_type_id",description="1", type="integer", example="1"),
+     *          @OA\Property(property="company_id",description="1", type="integer", example="1"),
      *
      *         )
      *      ),
