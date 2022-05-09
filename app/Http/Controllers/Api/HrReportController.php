@@ -45,14 +45,9 @@ class HrReportController extends Controller
      */
     public function getByReportDay($report_day, $company_id)
     {
-//        return  HrReport::select()
-//            ->where('report_day', '=', $report_day)
-//            ->where('company_id', '=', $company_id)
-//            ->get();
-
-        return HrReport::
-              whereCompanyId($report_day)
-            ->whereCompanyId($company_id)
+        return HrReport::select()
+            ->whereReportDay($report_day)
+//            ->whereCompanyId($company_id)
             ->get();
 
 
