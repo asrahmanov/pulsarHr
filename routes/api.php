@@ -55,6 +55,15 @@ reg_routes('hr-report', \App\Http\Controllers\Api\HrReportController::class,
     ]
 );
 
+reg_routes('hr-report-covid', \App\Http\Controllers\Api\HrReportCovidController::class,
+    $router,
+    [],
+    [],
+    [
+        ['method' => 'get', 'uri' => 'get-by-report-day', 'pathParams'=>['report_day', 'company_id']]
+    ]
+);
+
 
 /*
  * $customUses=['method'=>'post','uri'=>'any']

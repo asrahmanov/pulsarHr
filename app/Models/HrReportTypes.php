@@ -26,6 +26,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Query\Builder|HrReportTypes withTrashed()
  * @method static \Illuminate\Database\Query\Builder|HrReportTypes withoutTrashed()
  * @mixin \Eloquent
+ * @property string $info
+ * @method static \Illuminate\Database\Eloquent\Builder|HrReportTypes whereInfo($value)
  */
 class HrReportTypes extends Model
 {
